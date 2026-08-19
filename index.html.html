@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ta">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Text Studio - Free 3D Text & Logo Generator</title>
 
-  <!-- Google Fonts Support for Tamil, Sinhala, English -->
+  <!-- Google Fonts for English, Tamil, Sinhala & Universal Text Support -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arima:wght@700&family=Baloo+Thambi+2:wght@800&family=Bungee&family=Lobster&family=Noto+Sans+Sinhala:wght@800&family=Pacifico&family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Poppins', 'Baloo Thambi 2', 'Noto Sans Sinhala', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
@@ -24,7 +24,7 @@
       overflow-x: hidden;
     }
 
-    /* Top Hero Header (TextStudio Blue Theme) */
+    /* Top Blue Hero Section */
     .hero-section {
       background: linear-gradient(180deg, #1d68f2 0%, #1752c4 100%);
       padding: 50px 20px 40px 20px;
@@ -76,7 +76,6 @@
     }
 
     .input-wrapper button {
-      background: #00d2ff;
       background: linear-gradient(135deg, #00d2ff, #0088ff);
       border: none;
       width: 55px;
@@ -94,7 +93,7 @@
       transform: scale(1.05);
     }
 
-    /* Circular Category Bar */
+    /* Circular Style Categories */
     .categories-bar {
       display: flex;
       gap: 18px;
@@ -136,7 +135,6 @@
       font-weight: 600;
     }
 
-    /* Categories Colors */
     .bg-gold { background: linear-gradient(135deg, #ffe066, #d4af37); color: #423200; }
     .bg-neon { background: linear-gradient(135deg, #00ffff, #ff007f); }
     .bg-metal { background: linear-gradient(135deg, #e0e0e0, #757575); color: #111; }
@@ -146,7 +144,7 @@
     .bg-3d { background: linear-gradient(135deg, #6366f1, #a855f7); }
     .bg-glitter { background: linear-gradient(135deg, #ec4899, #8b5cf6); }
 
-    /* Template Cards Section */
+    /* Templates Grid */
     .gallery-container {
       max-width: 1200px;
       margin: 40px auto;
@@ -162,14 +160,14 @@
 
     .templates-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 20px;
     }
 
     .card {
       background: #1e293b;
       border-radius: 12px;
-      height: 160px;
+      height: 170px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -264,7 +262,6 @@
       margin-top: 10px;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .hero-title { font-size: 1.6rem; }
       .modal-body { flex-direction: column; }
@@ -274,7 +271,7 @@
 </head>
 <body>
 
-  <!-- Top Blue Hero Section -->
+  <!-- Top Hero Header -->
   <div class="hero-section">
     <h1 class="hero-title">Text Studio 3D</h1>
     <div class="hero-subtitle">
@@ -282,60 +279,58 @@
       <span>✓ Perfect for your YouTube, TikTok, Instagram, and social media content.</span>
     </div>
 
-    <!-- Main Live Search Input -->
+    <!-- Input Box with Placeholder Only -->
     <div class="input-wrapper">
-      <input type="text" id="globalInput" value="தமிழ் / Design" placeholder="Type Your Text Here">
+      <input type="text" id="globalInput" value="" placeholder="Type Your Text Here">
       <button>🪄</button>
     </div>
 
-    <!-- Round Style Bar -->
+    <!-- Style Category Bar -->
     <div class="categories-bar">
-      <div class="cat-item" onclick="filterStyle('gold')"><div class="cat-circle bg-gold">Gold</div><div class="cat-name">Gold</div></div>
-      <div class="cat-item" onclick="filterStyle('neon')"><div class="cat-circle bg-neon">Neon</div><div class="cat-name">Neon</div></div>
-      <div class="cat-item" onclick="filterStyle('metal')"><div class="cat-circle bg-metal">Metal</div><div class="cat-name">Metal</div></div>
-      <div class="cat-item" onclick="filterStyle('fire')"><div class="cat-circle bg-fire">Fire</div><div class="cat-name">Fire</div></div>
-      <div class="cat-item" onclick="filterStyle('retro')"><div class="cat-circle bg-retro">Retro</div><div class="cat-name">Retro</div></div>
-      <div class="cat-item" onclick="filterStyle('comic')"><div class="cat-circle bg-comic">Comic</div><div class="cat-name">Comic</div></div>
-      <div class="cat-item" onclick="filterStyle('3d')"><div class="cat-circle bg-3d">3D</div><div class="cat-name">3D</div></div>
-      <div class="cat-item" onclick="filterStyle('glitter')"><div class="cat-circle bg-glitter">Glitter</div><div class="cat-name">Glitter</div></div>
+      <div class="cat-item"><div class="cat-circle bg-gold">Gold</div><div class="cat-name">Gold</div></div>
+      <div class="cat-item"><div class="cat-circle bg-neon">Neon</div><div class="cat-name">Neon</div></div>
+      <div class="cat-item"><div class="cat-circle bg-metal">Metal</div><div class="cat-name">Metal</div></div>
+      <div class="cat-item"><div class="cat-circle bg-fire">Fire</div><div class="cat-name">Fire</div></div>
+      <div class="cat-item"><div class="cat-circle bg-retro">Retro</div><div class="cat-name">Retro</div></div>
+      <div class="cat-item"><div class="cat-circle bg-comic">Comic</div><div class="cat-name">Comic</div></div>
+      <div class="cat-item"><div class="cat-circle bg-3d">3D</div><div class="cat-name">3D</div></div>
+      <div class="cat-item"><div class="cat-circle bg-glitter">Glitter</div><div class="cat-name">Glitter</div></div>
     </div>
   </div>
 
-  <!-- Main Templates Grid -->
+  <!-- Main Templates Section -->
   <div class="gallery-container">
     <h2 class="section-title">Popular 3D Text Styles</h2>
-    <div class="templates-grid" id="templatesGrid">
-      <!-- Cards will be generated dynamically -->
-    </div>
+    <div class="templates-grid" id="templatesGrid"></div>
   </div>
 
-  <!-- Editor Modal -->
+  <!-- Editor Pop-up Modal -->
   <div class="editor-modal" id="editorModal">
     <div class="modal-content">
       <span class="close-btn" onclick="closeModal()">&times;</span>
-      <h3 style="color:#38bdf8;">Edit Your 3D Text</h3>
+      <h3 style="color:#38bdf8;">Edit 3D Text Style</h3>
       <div class="modal-body">
         <div class="modal-preview">
-          <canvas id="activeCanvas" width="500" height="300"></canvas>
+          <canvas id="activeCanvas" width="550" height="320"></canvas>
         </div>
         <div class="modal-controls">
           <label>Font Family</label>
-          <select id="modalFont" style="padding:8px; background:#0f172a; color:#fff; border-radius:6px; border:1px solid #334155;">
-            <option value="'Baloo Thambi 2', sans-serif">Tamil Bold (Baloo Thambi)</option>
-            <option value="'Arima', cursive">Tamil Cursive (Arima)</option>
-            <option value="'Noto Sans Sinhala', sans-serif">Sinhala Bold (Noto Sans)</option>
-            <option value="'Pacifico', cursive">Retro Script (Pacifico)</option>
-            <option value="'Bungee', cursive">3D Block (Bungee)</option>
+          <select id="modalFont" style="padding:10px; background:#0f172a; color:#fff; border-radius:6px; border:1px solid #334155;">
             <option value="'Poppins', sans-serif">Modern Sans (Poppins)</option>
+            <option value="'Bungee', cursive">3D Block (Bungee)</option>
+            <option value="'Pacifico', cursive">Retro Script (Pacifico)</option>
+            <option value="'Lobster', cursive">Vintage Cursive (Lobster)</option>
+            <option value="'Baloo Thambi 2', sans-serif">Bold Rounded (Baloo)</option>
+            <option value="'Noto Sans Sinhala', sans-serif">Universal Bold (Noto)</option>
           </select>
 
           <label>Extrusion Depth</label>
           <input type="range" id="modalDepth" min="5" max="35" value="18">
 
           <label>Font Size</label>
-          <input type="range" id="modalSize" min="30" max="80" value="50">
+          <input type="range" id="modalSize" min="30" max="85" value="50">
 
-          <button class="btn-download" id="downloadBtn">Download PNG</button>
+          <button class="btn-download" id="downloadBtn">Download HD PNG</button>
         </div>
       </div>
     </div>
@@ -348,14 +343,13 @@
     const activeCanvas = document.getElementById('activeCanvas');
     const actCtx = activeCanvas.getContext('2d');
 
-    // Preset Style Configs
     const stylePresets = [
-      { id: 'retro', name: 'Retro Orange', main: "#0f3759", stroke: "#52b8e8", extrusion: "#ff5035", border: "#ffffff" },
-      { id: 'neon', name: 'Cyber Neon', main: "#00ffff", stroke: "#0088ff", extrusion: "#ff007f", border: "#2d004d" },
-      { id: 'gold', name: 'Shiny Gold', main: "#ffe066", stroke: "#cca300", extrusion: "#806000", border: "#ffffff" },
-      { id: 'comic', name: 'Comic Pop', main: "#ffe600", stroke: "#000000", extrusion: "#ff2a00", border: "#000000" },
-      { id: 'fire', name: 'Fire Flame', main: "#ffff00", stroke: "#ff6600", extrusion: "#cc0000", border: "#330000" },
-      { id: 'glitter', name: 'Pastel Glow', main: "#f472b6", stroke: "#c084fc", extrusion: "#4c1d95", border: "#ffffff" }
+      { id: 'retro', font: "'Poppins', sans-serif", main: "#0f3759", stroke: "#52b8e8", extrusion: "#ff5035", border: "#ffffff" },
+      { id: 'neon', font: "'Poppins', sans-serif", main: "#00ffff", stroke: "#0088ff", extrusion: "#ff007f", border: "#2d004d" },
+      { id: 'gold', font: "'Poppins', sans-serif", main: "#ffe066", stroke: "#cca300", extrusion: "#806000", border: "#ffffff" },
+      { id: 'comic', font: "'Poppins', sans-serif", main: "#ffe600", stroke: "#000000", extrusion: "#ff2a00", border: "#000000" },
+      { id: 'fire', font: "'Poppins', sans-serif", main: "#ffff00", stroke: "#ff6600", extrusion: "#cc0000", border: "#330000" },
+      { id: 'glitter', font: "'Poppins', sans-serif", main: "#f472b6", stroke: "#c084fc", extrusion: "#4c1d95", border: "#ffffff" }
     ];
 
     let currentPreset = stylePresets[0];
@@ -363,29 +357,29 @@
     // Render Home Gallery Cards
     function renderGallery() {
       templatesGrid.innerHTML = '';
-      const text = globalInput.value || "Design";
+      const textToDisplay = globalInput.value.trim() !== "" ? globalInput.value.trim() : "Design";
 
-      stylePresets.forEach((preset, index) => {
+      stylePresets.forEach((preset) => {
         const card = document.createElement('div');
         card.className = 'card';
         card.onclick = () => openEditor(preset);
 
         const canvas = document.createElement('canvas');
-        canvas.width = 280;
-        canvas.height = 160;
+        canvas.width = 300;
+        canvas.height = 170;
         canvas.className = 'card-canvas';
 
-        draw3DTextOnCanvas(canvas.getContext('2d'), text, preset, 28, 12, canvas.width, canvas.height);
+        draw3DTextOnCanvas(canvas.getContext('2d'), textToDisplay, preset, 34, 14, canvas.width, canvas.height, preset.font);
 
         card.appendChild(canvas);
         templatesGrid.appendChild(card);
       });
     }
 
-    // Canvas 3D Render Engine
-    function draw3DTextOnCanvas(ctx, text, style, fontSize, depth, width, height, fontStyle="'Poppins', sans-serif") {
+    // 3D Rendering Engine
+    function draw3DTextOnCanvas(ctx, text, style, fontSize, depth, width, height, fontStyle) {
       ctx.clearRect(0, 0, width, height);
-      ctx.font = `bold ${fontSize}px ${fontStyle}`;
+      ctx.font = `900 ${fontSize}px ${fontStyle}`;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.lineJoin = 'round';
@@ -400,7 +394,7 @@
         ctx.strokeText(text, x + i, y + i);
       }
 
-      // 3D Extrusion
+      // 3D Extrusion Block
       ctx.strokeStyle = style.extrusion;
       ctx.lineWidth = 8;
       for (let i = 1; i <= depth; i++) {
@@ -417,10 +411,9 @@
       ctx.fillText(text, x, y);
     }
 
-    // Live update on top input type
     globalInput.addEventListener('input', renderGallery);
 
-    // Modal Controls
+    // Modal Editor Functions
     function openEditor(preset) {
       currentPreset = preset;
       editorModal.style.display = 'flex';
@@ -432,7 +425,7 @@
     }
 
     function updateModalCanvas() {
-      const text = globalInput.value || "Design";
+      const text = globalInput.value.trim() !== "" ? globalInput.value.trim() : "Design";
       const size = parseInt(document.getElementById('modalSize').value);
       const depth = parseInt(document.getElementById('modalDepth').value);
       const font = document.getElementById('modalFont').value;
@@ -447,12 +440,11 @@
     // Download PNG
     document.getElementById('downloadBtn').addEventListener('click', () => {
       const link = document.createElement('a');
-      link.download = 'text-studio-3d.png';
+      link.download = '3d-text-studio.png';
       link.href = activeCanvas.toDataURL('image/png');
       link.click();
     });
 
-    // Initial Load
     document.fonts.ready.then(() => {
       renderGallery();
     });
